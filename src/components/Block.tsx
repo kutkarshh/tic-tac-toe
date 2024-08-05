@@ -1,14 +1,24 @@
 import React from "react";
 
 interface BlockProps {
-    value?: string | null;
+    value?: "X" | "O" | null;
     onClick?: () => void;
 }
 
+const blockBg = {
+    X: 'red',
+    O: 'blue',
+};
+
 const Block: React.FC<BlockProps> = (props) => {
+    const { value, onClick } = props;
+    const blockClass = value ? `block ${blockBg[value]}` : "block";
 
-    return (<div onClick={props.onClick} className="block"><h2>{props.value}</h2></div>)
+    return (
+        <div onClick={onClick} className={blockClass}>
+            <h2>{value}</h2>
+        </div>
+    );
+};
 
-}
-
-export default Block
+export default Block;

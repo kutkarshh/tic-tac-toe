@@ -1,3 +1,34 @@
+body {
+  background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  width: 200px; /* Fixed width for the info sections */
+  text-align: center;
+  margin: 0 20px; /* Adjust margin to center the board */
+}
+
 .block {
   border: 2px solid black;
   width: 200px;
@@ -12,14 +43,8 @@
 }
 
 .title {
-  color: blue;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
-}
-
-.board {
-  width: 650px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -29,4 +54,12 @@
 
 .row {
   display: flex;
+}
+
+.red {
+  color: rgb(255, 140, 0);
+}
+
+.blue {
+  color: rgb(124, 255, 43);
 }
